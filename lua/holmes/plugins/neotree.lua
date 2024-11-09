@@ -15,7 +15,7 @@ return {
 			})
 
 			local keymap = vim.keymap -- for conciseness
-			keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", {})
+			keymap.set("n", "<leader>bn", ":Neotree filesystem toggle reveal<CR>", {})
 			keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 		end,
 	},
