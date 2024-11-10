@@ -9,6 +9,6 @@ return {
 	config = function()
 		local neogit = require("neogit")
 
-		vim.keymap.set("n", "<leader>go", neogit.open, {})
+		vim.keymap.set("n", "<leader>go", neogit.open, { desc = "Open Git UI" })
 	end,
 }
