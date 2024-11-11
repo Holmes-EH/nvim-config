@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "tokyonight",
+				-- theme = "catpuccin",
 				disabled_filetypes = {
 					"neo-tree",
 				},
