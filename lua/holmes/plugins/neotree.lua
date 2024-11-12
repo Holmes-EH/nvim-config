@@ -13,10 +13,21 @@ return {
 					width = 30,
 				},
 			})
-
 			local keymap = vim.keymap -- for conciseness
-			keymap.set("n", "<leader>bn", ":Neotree filesystem toggle reveal<CR>", {})
-			keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
+
+			keymap.set("n", "<leader>bn", ":Neotree filesystem toggle reveal<CR>", { desc = "Toggle tree display" })
+			keymap.set(
+				"n",
+				"<leader>bf",
+				":Neotree buffers reveal float<CR>",
+				{ desc = "Show open buffers in floating window" }
+			)
+			keymap.set(
+				"n",
+				"<leader>bg",
+				":Neotree float git_status<CR>",
+				{ desc = "Open git status in floating window" }
+			)
 		end,
 	},
 }
