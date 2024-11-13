@@ -1,2 +1,2 @@
-require("holmes.core")
 require("holmes.lazy")
+require("holmes.core")
