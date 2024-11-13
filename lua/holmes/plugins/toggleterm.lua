@@ -11,7 +11,7 @@ return {
 	keys = {
 		{ [[<C-\>]] },
 		{
-			"<leader>tf",
+			"<leader>zf",
 			function()
 				local count = vim.v.count1
 				require("toggleterm").toggle(count, 0, vim.loop.cwd(), "float")
@@ -19,7 +19,7 @@ return {
 			desc = "ToggleTerm floating Terminal",
 		},
 		{
-			"<leader>ts",
+			"<leader>zs",
 			"<cmd>TermSelect<cr>",
 			desc = "Select term",
 		},
