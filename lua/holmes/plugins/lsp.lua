@@ -34,6 +34,12 @@ return {
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
+			local symbols = { Error = "󰅙", Info = "󰋼", Hint = "󰌵", Warn = "" }
+
+			for name, icon in pairs(symbols) do
+				local hl = "DiagnosticSign" .. name
+				vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+			end
 			vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = "LSP - Trigger hover" })
 			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "LSP - Go to definition" })
 			vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = " LSP - Code action" })
