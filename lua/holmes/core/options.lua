@@ -45,3 +45,14 @@ vim.opt.fillchars:append("fold: ")
 vim.opt.foldlevelstart = 99
 
 vim.opt.foldcolumn = "1"
+
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.INFO] = "󰋼",
+			[vim.diagnostic.severity.HINT] = "",
+		},
+	},
+})
