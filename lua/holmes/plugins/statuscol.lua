@@ -7,6 +7,7 @@ return {
 		local builtin = require("statuscol.builtin")
 		require("statuscol").setup({
 			relculright = true,
+			ft_ignore = { "NvimTree" },
 			segments = {
 				{ text = { builtin.foldfunc, " " }, click = "v:lua.ScFa" },
 				{

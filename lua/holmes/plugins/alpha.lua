@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 		"MaximilianLloyd/ascii.nvim",
+		"MunifTanjim/nui.nvim",
 	},
 
 	config = function()
