@@ -3,6 +3,7 @@ vim.g.netrw_liststyle = 3
 local opt = vim.opt -- for conciseness
 
 opt.swapfile = false
+opt.wrap = false
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
