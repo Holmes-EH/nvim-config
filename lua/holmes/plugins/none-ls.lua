@@ -14,6 +14,8 @@ return {
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.golines,
+				null_ls.builtins.formatting.buf,
+				null_ls.builtins.diagnostics.buf,
 				-- null_ls.builtins.diagnostics.gopls,
 			},
 			-- you can reuse a shared lspconfig on_attach callback here
