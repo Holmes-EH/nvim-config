@@ -15,6 +15,7 @@ return {
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.golines,
 				null_ls.builtins.formatting.buf,
+				null_ls.builtins.formatting.yamlfix,
 				null_ls.builtins.diagnostics.buf,
 				-- null_ls.builtins.diagnostics.gopls,
 			},

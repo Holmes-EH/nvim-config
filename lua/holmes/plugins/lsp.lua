@@ -37,6 +37,7 @@ return {
 			vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = "LSP - Trigger hover" })
 			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "LSP - Go to definition" })
 			vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = " LSP - Code action" })
+			vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = " LSP - Restart" })
 		end,
 	},
 }
