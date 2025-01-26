@@ -75,7 +75,8 @@ return {
 			local api = require("nvim-tree.api")
 			local keymap = vim.keymap
 
-			keymap.set("n", "<leader>et", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle tree display" })
+			keymap.set("n", "<leader><Tab>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle tree display" })
+			keymap.set("n", "<leader>ee", function() end, { desc = "Open Tree in float" })
 			keymap.set("n", "<leader>ef", function()
 				api.tree.open()
 			end, { desc = "Focus tree display" })

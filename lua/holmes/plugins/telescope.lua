@@ -16,6 +16,7 @@ return {
 			telescope.setup({
 				defaults = {
 					path_display = { "smart" },
+					file_ignore_patterns = { "node_modules", "package-lock.json" },
 					mappings = {
 						i = {
 							["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -23,10 +24,41 @@ return {
 							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						},
 					},
+					layout_config = {
+						prompt_position = "top",
+					},
+				},
+				pickers = {
+					buffers = {
+						mappings = {
+							i = {
+								["<c-d>"] = actions.delete_buffer,
+							},
+							n = {
+								["<c-d>"] = actions.delete_buffer,
+							},
+						},
+						initial_mode = "normal",
+						theme = "dropdown",
+						layout_config = {
+							height = 0.4,
+							width = 0.6,
+							prompt_position = "top",
+							preview_cutoff = 120,
+						},
+					},
+					document_symbols = {
+						initial_mode = "normal",
+						theme = "dropdown",
+						layout_config = {
+							height = 0.4,
+							width = 0.6,
+							prompt_position = "top",
+							preview_cutoff = 120,
+						},
+					},
 				},
 			})
-
-			telescope.load_extension("fzf")
 
 			-- set keymaps
 			local keymap = vim.keymap -- for conciseness
@@ -37,6 +69,9 @@ return {
 			keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 			keymap.set("n", "<leader>fc", builtin.grep_string, { desc = "Find string under cursor in cwd" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+
+			telescope.load_extension("fzf")
+			telescope.load_extension("noice")
 		end,
 	},
 	{

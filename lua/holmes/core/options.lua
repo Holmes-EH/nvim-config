@@ -2,6 +2,7 @@ vim.g.netrw_liststyle = 3
 
 local opt = vim.opt -- for conciseness
 
+opt.laststatus = 3
 opt.swapfile = false
 opt.wrap = false
 
