@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   opts = {
-    formatters_by_ft = { rust = { "rustfmt" } },
+    formatters_by_ft = { rust = { "rustfmt" }, go = { "goimports", "gofumpt", "golines" } },
     formatters = {
       ["markdownlint-cli2"] = {
         args = {
